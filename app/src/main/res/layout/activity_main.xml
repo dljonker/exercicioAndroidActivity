@@ -33,12 +33,13 @@
         android:layout_height="wrap_content"
         android:background="#41672C"
         android:onClick="onClickBtnMostrar"
-        android:text="Mostrar" />
+        android:text="Mostrar"
+        android:textColor="#F1F1F1" />
 
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="20dp"
         android:background="?android:attr/listDivider" />
 
     <Button
@@ -47,6 +48,8 @@
         android:layout_height="wrap_content"
         android:background="#BD4242"
         android:onClick="onClickBtnApaga"
-        android:text="Apagar textos" />
+        android:text="Apagar textos"
+        android:textColor="#F4F4F4"
+        android:textStyle="bold" />
 
 </LinearLayout>
