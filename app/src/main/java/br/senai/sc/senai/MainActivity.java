@@ -12,24 +12,25 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText editTextTexto;
+    private EditText editTextOutroTexto;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.editTextTexto = findViewById(R.id.et_texto);
+        this.editTextOutroTexto = findViewById(R.id.et_texto2);
         }
 
     public void onClickBtnMostrar(View v) {
-        EditText editTextTexto = findViewById(R.id.et_texto);
-        EditText editTextOutroTexto = findViewById(R.id.et_texto2);
         String textoConca = editTextTexto.getText() + " " + editTextOutroTexto.getText();
         Toast.makeText(MainActivity.this, textoConca, Toast.LENGTH_LONG).show();
     }
 
     public void onClickBtnApaga(View v) {
-        EditText editTextApaga = (EditText)findViewById(R.id.et_texto);
-        editTextApaga.setText("");
-        EditText editTextOutroApaga = (EditText)findViewById(R.id.et_texto2);
-        editTextOutroApaga.setText("");
+        editTextTexto.setText("");
+        editTextOutroTexto.setText("");
 
     }
 }
